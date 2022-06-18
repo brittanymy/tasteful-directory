@@ -118,7 +118,7 @@ async function addDepartment() {
         },
     ]);
 
-    const createDepartmentRows = await createDepartment(response.deparment);
+    const createDepartmentRows = await createDepartment(response.department);
 
     viewDepartments();
 }
@@ -156,7 +156,7 @@ async function addRole() {
     const [createRoleRows] = await createRole (
         response.title,
         salaryInt,
-        reponse.choice
+        response.choice
     );
 
     viewRoles();
