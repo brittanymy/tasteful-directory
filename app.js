@@ -123,12 +123,12 @@ async function addDepartment() {
 
 // Allows user to add role to table
 async function addRole() {
-    const [departmentRoles] = findDepartments();
+    // const [departmentRoles] = findDepartments();
 
-    const choices = departmentRoles.map((department) => ({
-        name: department.name,
-        value: department.id,
-    }));
+    // const choices = departmentRoles.map((department) => ({
+    //     name: department.name,
+    //     value: department.id,
+    // }));
 
     const response = await prompt ([
         {
@@ -138,26 +138,25 @@ async function addRole() {
         },
         {
             type: "input",
-            name: "title",
+            name: "salary",
             message: "What is the salary of the role you'd like to add?",
         },
-        {
-            type: "input",
-            name: "choice",
-            message: "What is the department this role is in?",
-            choices,
-        },
+        // {
+        //     type: "input",
+        //     name: "choice",
+        //     message: "What is the department this role is in?",
+        //     choices,
+        // },
     ]);
 
-    const salaryInt = parseInt(response.salary);
+  // const salaryInt = parseInt(response.salary);
 
-    const [createRoleRows] = await createRole (
+    // const [createRoleRows] = await 
+    createRole (
         response.title,
-        salaryInt,
-        response.choice
-    );
+        response.salary,viewRoles);
 
-    viewRoles();
+    //viewRoles();
 }
 
 // Allows user to add an employee to table 
