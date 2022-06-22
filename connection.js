@@ -41,8 +41,14 @@ function findEmployees(callback) {
     );
 }
 
-async function createDepartment(name) {
-    return db.query("INSERT INTO DEPARTMENT (name) VALUES (?);", name);
+function createDepartment(name,callback) {
+   db.query("INSERT INTO DEPARTMENT (name) VALUES (?);", name,
+   function(err,data){
+    if(err) throw err;
+    console.table(data)
+    callback()
+}
+   );
 }
 
 async function createRole(title, salary, department_id) {

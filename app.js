@@ -118,9 +118,7 @@ async function addDepartment() {
         },
     ]);
 
-    const createDepartmentRows = await createDepartment(response.department);
-
-    viewDepartments();
+    createDepartment(response.department,viewDepartments);
 }
 
 // Allows user to add role to table
