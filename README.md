@@ -32,4 +32,4 @@ THEN I am prompted to select an employee to update and their new role and this i
 -   Fix add employee functionality
 -   Fix update employee functionality
 
-## Video & Screenshot
+## Video
