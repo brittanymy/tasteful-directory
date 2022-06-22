@@ -9,7 +9,7 @@ const {
     createRole,
     createEmployee,
     editEmployee,
-} = require("./index");
+} = require("./connection");
 
 const consoleTable = require("console.table");
 
@@ -79,33 +79,33 @@ async function questionPrompt() {
 
 // Add data to console.table
 // View department function
-async function viewDepartments() {
-    const [rows] = await findDepartments();
-    const departments = rows;
+function viewDepartments() {
+    findDepartments(questionPrompt);
+    // const departments = rows;
 
-    console.table(departments);
+    // console.table(departments);
 
-    questionPrompt();
+    // questionPrompt();
 }
 
 // View role function
-async function viewRoles() {
-    const [rows] = await findRoles();
-    const roles = rows;
+function viewRoles() {
+    findRoles(questionPrompt);
+    // const roles = rows;
 
-    console.table(rows);
+    // console.table(rows);
 
-    questionPrompt();
+    // questionPrompt();
 }
 
 // View employee function
-async function viewEmployees() {
-    const [rows] = await findEmployees();
-    const employees = rows;
+function viewEmployees() {
+     findEmployees(questionPrompt);
+    // const employees = rows;
 
-    console.table(employee);
+    // console.table(employee);
 
-    questionPrompt();
+    // questionPrompt();
 }
 
 // Allows user to add department to table

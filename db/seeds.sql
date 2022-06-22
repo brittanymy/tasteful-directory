@@ -2,8 +2,8 @@ USE employees_db;
 
 INSERT INTO department (name)
 VALUES
-("Sales");
-("Engineering");
+("Sales"),
+("Engineering"),
 ("Finance");
 
 INSERT INTO role (title, salary, department_id)

@@ -1,5 +1,5 @@
 DROP DATABASE IF EXISTS employees_db;
-CREATE DATABASE employee_db;
+CREATE DATABASE employees_db;
 USE employees_db;
 
 DROP TABLE IF EXISTS department;
@@ -26,5 +26,5 @@ CREATE TABLE employee (
     role_id INTEGER,
     manager_id INTEGER,
     CONSTRAINT fk_role FOREIGN KEY (role_id) REFERENCES role(id),
-    CONSTRAINT fk_employee FOREIGN KEY (manager_id) REFERENCES employee(id)
+    CONSTRAINT fk_employee FOREIGN KEY (manager_id) REFERENCES employee(id) ON DELETE SET NULL
 );
