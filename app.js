@@ -81,31 +81,16 @@ async function questionPrompt() {
 // View department function
 function viewDepartments() {
     findDepartments(questionPrompt);
-    // const departments = rows;
-
-    // console.table(departments);
-
-    // questionPrompt();
 }
 
 // View role function
 function viewRoles() {
     findRoles(questionPrompt);
-    // const roles = rows;
-
-    // console.table(rows);
-
-    // questionPrompt();
 }
 
 // View employee function
 function viewEmployees() {
      findEmployees(questionPrompt);
-    // const employees = rows;
-
-    // console.table(employee);
-
-    // questionPrompt();
 }
 
 // Allows user to add department to table
@@ -123,12 +108,6 @@ async function addDepartment() {
 
 // Allows user to add role to table
 async function addRole() {
-    // const [departmentRoles] = findDepartments();
-
-    // const choices = departmentRoles.map((department) => ({
-    //     name: department.name,
-    //     value: department.id,
-    // }));
 
     const response = await prompt ([
         {
@@ -154,9 +133,8 @@ async function addRole() {
     // const [createRoleRows] = await 
     createRole (
         response.title,
-        response.salary,viewRoles);
-
-    //viewRoles();
+        response.salary,viewRoles
+    );
 }
 
 // Allows user to add an employee to table 
